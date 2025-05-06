@@ -1,2 +1,1 @@
-# mangadex_volume_packer
-Packs mangadex chapters into a volumes.
+This is a personal backup. There will be no support.
