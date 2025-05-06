@@ -352,7 +352,7 @@ source = "MangaDex"
 sleep_time = 5
 
 # the output path for the generated files
-output_path = "/Users/zach/mangadex"
+output_path = ""
 
 volume_number = None
 sort = False
