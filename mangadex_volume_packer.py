@@ -17,6 +17,9 @@ from unidecode import unidecode
 
 # Mangadex Volume Downloader/Packer
 
+# the output path for the generated files
+output_path = ""
+
 # Whether or not to ask the user for values
 get_user_input = True # always true unless testing
 
@@ -33,9 +36,6 @@ source = "MangaDex"
 
 # time to sleep in-between page requests
 sleep_time = 5
-
-# the output path for the generated files
-output_path = ""
 
 volume_number = None
 sort = False
