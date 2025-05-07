@@ -12,10 +12,37 @@ from mangadex import Chapter, CoverArt, Manga
 from unidecode import unidecode
 
 # Tested On: Python 3.9.12
-# Requirements: pip3 install mangadex && pip3 install requests && pip3 install unidecode
 # Requires specific mangadex pypi version, until I get around to updating the code.
+# "pip3 install ." inside mangadex-main directory
 
 # Mangadex Volume Downloader/Packer
+
+# the output path for the generated files
+output_path = ""
+
+# Whether or not to ask the user for values
+get_user_input = True  # always true unless testing
+
+# The number of API hits made
+number_of_api_hits = 0
+
+# The default search string
+DEFAULT_SEARCH = "Gal Assistant"  # for testing
+
+# The required score when comparing two strings likeness, for it to be considered a match.
+requried_similarity_score = 0.9790
+series_name = None
+source = "MangaDex"
+
+# time to sleep in-between page requests
+sleep_time = 5
+
+volume_number = None
+sort = False
+limit = 100
+offset = None
+language = "ja"
+only_these_volumes = []
 
 
 # volume class
@@ -332,34 +359,6 @@ def format_chapter_and_volume_numbers(chapter_number, volume_number):
         str(volume_number).zfill(2) if volume_number < 10 else f"{volume_number}"
     )
     return f"c{chapter_str} (v{volume_str})"
-
-
-# Whether or not to ask the user for values
-get_user_input = True
-
-# The number of API hits made
-number_of_api_hits = 0
-
-# The default search string
-DEFAULT_SEARCH = "Gal Assistant"
-
-# The required score when comparing two strings likeness, for it to be considered a match.
-requried_similarity_score = 0.9790
-series_name = None
-source = "MangaDex"
-
-# time to sleep in-between page requests
-sleep_time = 5
-
-# the output path for the generated files
-output_path = ""
-
-volume_number = None
-sort = False
-limit = 100
-offset = None
-language = "ja"
-only_these_volumes = []
 
 
 def main():
