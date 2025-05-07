@@ -13,7 +13,6 @@ from unidecode import unidecode
 
 # Tested On: Python 3.9.12
 # Requires specific mangadex pypi version, until I get around to updating the code.
-# "pip3 install ." inside mangadex-main directory
 
 # Mangadex Volume Downloader/Packer
 
